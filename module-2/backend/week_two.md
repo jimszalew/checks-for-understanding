@@ -5,6 +5,7 @@ Fork this respository. Answer the questions to the best of your ability. Try to 
 Note: When you're done, submit a PR.
 
 1. At a high level, what is ActiveRecord? What does it do/allow you to do?
+  * ActiveRecord is a library for working with relational databases
 2. Assume you have the following model:
 
 ```ruby
@@ -13,9 +14,9 @@ end
 ```
 
 What are some methods you can call on `Team`? If these methods aren't defined in the class, how do you have access to them?
-
+  * Team.all, Team.first, these methods are inherent in AR
 3. Assume that in your database, a team has the following attributes: "id", "name", owner_id". How would you find the name of a team with an id of 4? Assuming your class only included the code from question 2, how could you find the owner of the same team?
-
+  * Team.find_by_id(4), Team.find_by_id(4).name
 4. Assume that you added a line to your `Team` class as follows:
 
 ```ruby
@@ -25,12 +26,15 @@ end
 ```
 
 Now how would you find the owner of the team with an id of 4?
-
+  * Team.find_by_id(4).owner
 5. In a database that's holding students and teachers, what will be the relationship between students and teachers? Draw the schema diagram.
+  * the students table will have a foreign key relating to the primary key of the teachers table, teacher_id.
 6. Define foreign key, primary key, and schema.
+  * foreign key is an integer on one table that refererences the primary key of another table. primary key is the id of a table, all of which will be unique. a schema is a representation of relations between tables and elements in those tables
 7. Describe the relationship between a foreign key on one table and a primary key on another table.
+  * a foreign key on one table is specifically referencing a primary key on another
 8. What are the parts of an HTTP response?
-
+  *
 
 ### Optional Questions
 
